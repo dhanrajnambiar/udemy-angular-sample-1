@@ -1,7 +1,46 @@
 <div>
-    <h2>List of Servers!</h2>
+    <p>Below demo string interpolation.
+        Any typescript expression that evaluates to type string
+        OR any expression value than can casted to string
+        is allowed within double curly braces.
+    </p>
+    <h2>List of Servers( Maximum Number {{ maximum_allowed }} )</h2>
     <app-server></app-server>
-    <app-server></app-server>
-    <app-server></app-server>
+    <div [align]="text_alignment">Testing Property Binding.
+        The property being content alignment.
+         Currently aligned to {{text_alignment}}.
+    </div>
+    <hr>
+    <div>
+        <p>This part demos property & event binding</p>
+        <button class="btn btn-primary" [disabled]="isDisabled"
+        (click)="create_server()">Create Server</button>
+        <p>{{ server_status }}</p>
+    </div>
+    <hr>
+    <div>
+        <input type="text" (input)="recce_server($event)">
+        <p>Current server name is {{ current_server_name }}</p>
+    </div>
+    <hr>
+    <div>
+        <p>This section demo's two way data binding using ngModel directive</p>
+        <select [(ngModel)]="car_name">
+            <option value="Lamborghini">Lambo</option>
+            <option value="Ferrari">Ferrari</option>
+            <option value="Ghost">Ghost</option>
+        </select>
+        <p>User input is {{car_name}}</p>
+    </div>
+    <hr>
+    <div>
+        <p>This is part of Assignment 2</p>
+        <input type="text" [(ngModel)]="username">
+        <p>The username is {{username}}</p>
+        <button class="btn btn-primary" [disabled]="username.length == 0" (click)="flush_name()">
+            Clear Username
+        </button>
+    </div>
 </div>
+<hr>
 
