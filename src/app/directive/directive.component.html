@@ -1,0 +1,6 @@
+<p>"ngIf" structural directive Demo</p>
+<label><b>Add Entity</b></label><br>
+<input type="text"><br>
+<button class="btn btn-primary" (click)="create_entity($event)">Create Entity</button><br>
+<p *ngIf="is_clicked; else no_entity">Added new entity.</p>
+<ng-template #no_entity><p>No Entities</p></ng-template>

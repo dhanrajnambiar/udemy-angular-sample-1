@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-   maximum_allowed : Number = 10;
    text_alignment : String = "center";
    isDisabled : boolean = true;
    server_status : String = "";
